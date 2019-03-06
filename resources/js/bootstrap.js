@@ -9,11 +9,9 @@
 try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
-    require('admin-lte/bower_components/bootstrap/dist/js/bootstrap.min');
+    require('bootstrap/dist/js/bootstrap.min');
     require('admin-lte/dist/js/adminlte.min');
-    require('datatables.net-bs/js/dataTables.bootstrap.min');
-    require('datatables.net-select-bs/js/select.bootstrap.min');
-
+    require('admin-lte/plugins/datatables/dataTables.bootstrap4');
 } catch (e) {}
 
 /**
@@ -21,7 +19,7 @@ try {
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
-
+window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
@@ -50,7 +48,7 @@ if (token) {
 
 // window.Echo = new Echo({
 //     broadcaster: 'pusher',
-//     key: process.env.MIX_PUSHER_APP_KEY,
-//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+//     key: process..env.MIX_PUSHER_APP_KEY,
+//     cluster: process..env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
