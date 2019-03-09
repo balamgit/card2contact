@@ -18,7 +18,7 @@
 @endif
 <div class="login-box">
     <div class="login-logo">
-        <b>Vegtable Market</b>
+        <b>Have a nice day!</b>
 
     </div>
 

@@ -8,12 +8,8 @@ use App\products;
 class basicviewcontroller extends Controller
 {
     //
-    public function productview(){
-        $products=products::all();
-        return view('allproduct')->with('products',$products);
+    public function dashboard(){
+        return view('dashboard');
     }
 
-    public function billformview(){
-        return view('billing_views.billform');
-    }
 }

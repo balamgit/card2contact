@@ -20,11 +20,13 @@
         "resolve-url-loader": "^2.3.2",
         "sass": "^1.17.2",
         "sass-loader": "^7.1.0",
+        "vue": "^2.6.8",
         "vue-template-compiler": "^2.6.8"
     },
     "dependencies": {
         "admin-lte": "^3.0.0-alpha.2",
         "font-awesome": "^4.7.0",
-        "ionicons": "^4.5.5"
+        "ionicons": "^4.5.5",
+        "jquery-ui": "^1.12.1"
     }
 }

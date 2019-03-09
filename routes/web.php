@@ -19,17 +19,5 @@ Route::group(['middleware'=>['pullback']],function (){
 });
 
 Route::group(['middleware'=>['logcheck']],function () {
-    Route::get('/dashboard', 'basicviewcontroller@productview')->name('All_Product');
-    Route::get('/bill/create', 'basicviewcontroller@billformview')->name('Billing');
-    Route::get('/reports', 'basicviewcontroller@reportsview')->name('Reports');
-    //post put patch delete
-    Route::post('/bill/create', 'postbills@store');
-    Route::post('/bill/Remark', 'postbills@store');
-    Route::delete('/bill/delete', 'postbills@delete');
-
-    Route::post('/product/create', 'postproducts@store');
-    Route::put('/product/update', 'postproducts@update');
-    Route::delete('/product/delete', 'postproducts@delete');
-    Route::post('/product/fetch', 'postproducts@getvalues');
-
+    Route::get('/dashboard', 'basicviewcontroller@dashboard')->name('Dashboard');
 });
