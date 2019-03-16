@@ -1036,6 +1036,59 @@
         ]
     },
     {
+        "name": "jeroendesloovere/vcard-bundle",
+        "version": "1.2.3",
+        "version_normalized": "1.2.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jeroendesloovere/vcard-bundle.git",
+            "reference": "0ccfc244eb411c1a93defe89b3ede9d9d1c3ceb6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jeroendesloovere/vcard-bundle/zipball/0ccfc244eb411c1a93defe89b3ede9d9d1c3ceb6",
+            "reference": "0ccfc244eb411c1a93defe89b3ede9d9d1c3ceb6",
+            "shasum": ""
+        },
+        "require": {
+            "jeroendesloovere/vcard": "^1.5",
+            "php": ">=5.3.3"
+        },
+        "require-dev": {
+            "symfony/framework-bundle": "~3.0"
+        },
+        "time": "2018-11-30T07:35:26+00:00",
+        "type": "symfony-bundle",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "JeroenDesloovere\\Bundle\\VCardBundle\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jeroen Desloovere",
+                "email": "info@jeroendesloovere.be",
+                "homepage": "http://jeroendesloovere.be",
+                "role": "Developer"
+            }
+        ],
+        "description": "This Symfony 2 bundle can generate vCards with lots of data. When using an < iOS 7 device it will export as a .ics file because iOS devices don't support the default .vcf files.",
+        "homepage": "https://github.com/jeroendesloovere/vcard-bundle",
+        "keywords": [
+            ".vcf",
+            "Symfony2",
+            "bundle",
+            "generator",
+            "php",
+            "vCard"
+        ]
+    },
+    {
         "name": "laravel/framework",
         "version": "v5.7.28",
         "version_normalized": "5.7.28.0",

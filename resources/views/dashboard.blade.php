@@ -65,14 +65,14 @@
           });
 
           // Without helper methods
-          var johnDoe = vCard.create(vCard.Version.FOUR)
-          johnDoe.add(vCard.Entry.NAME, ''+name+';'+';;')
-          johnDoe.add(vCard.Entry.FORMATTEDNAME, name)
-          johnDoe.add(vCard.Entry.PHONE, phone, vCard.Type.CELL)
-          johnDoe.add(vCard.Entry.EMAIL, mail, vCard.Type.WORK)
-          johnDoe.add(vCard.Entry.EMAIL, mail, vCard.Type.HOME)
-          johnDoe.add(vCard.Entry.ADDRESS, address, vCard.Type.HOME)
-          var link = vCard.export(johnDoe, name, true) // use parameter true to force download
+          var mycard = vCard.create(vCard.Version.FOUR)
+          mycard.add(vCard.Entry.NAME, ''+name+';'+';;')
+          mycard.add(vCard.Entry.FORMATTEDNAME, name)
+          mycard.add(vCard.Entry.PHONE, phone, vCard.Type.CELL)
+          mycard.add(vCard.Entry.EMAIL, mail, vCard.Type.WORK)
+          mycard.add(vCard.Entry.EMAIL, mail, vCard.Type.HOME)
+          mycard.add(vCard.Entry.ADDRESS, address, vCard.Type.HOME)
+          var link = vCard.export(mycard, name, true) // use parameter true to force download
           document.body.appendChild(link)
       }
 

@@ -108,6 +108,7 @@ class ComposerStaticInit963aad5eaac26100d3cc2f562083ee3c
         'J' => 
         array (
             'JeroenDesloovere\\VCard\\' => 23,
+            'JeroenDesloovere\\Bundle\\VCardBundle\\' => 36,
             'JakubOnderka\\PhpConsoleHighlighter\\' => 35,
             'JakubOnderka\\PhpConsoleColor\\' => 29,
         ),
@@ -308,6 +309,10 @@ class ComposerStaticInit963aad5eaac26100d3cc2f562083ee3c
         'JeroenDesloovere\\VCard\\' => 
         array (
             0 => __DIR__ . '/..' . '/jeroendesloovere/vcard/src',
+        ),
+        'JeroenDesloovere\\Bundle\\VCardBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jeroendesloovere/vcard-bundle',
         ),
         'JakubOnderka\\PhpConsoleHighlighter\\' => 
         array (
@@ -1994,6 +1999,8 @@ class ComposerStaticInit963aad5eaac26100d3cc2f562083ee3c
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/Highlighter.php',
+        'JeroenDesloovere\\Bundle\\VCardBundle\\DependencyInjection\\JeroenDesloovereVCardExtension' => __DIR__ . '/..' . '/jeroendesloovere/vcard-bundle/DependencyInjection/JeroenDesloovereVCardExtension.php',
+        'JeroenDesloovere\\Bundle\\VCardBundle\\JeroenDesloovereVCardBundle' => __DIR__ . '/..' . '/jeroendesloovere/vcard-bundle/JeroenDesloovereVCardBundle.php',
         'JeroenDesloovere\\VCard\\VCard' => __DIR__ . '/..' . '/jeroendesloovere/vcard/src/VCard.php',
         'JeroenDesloovere\\VCard\\VCardException' => __DIR__ . '/..' . '/jeroendesloovere/vcard/src/VCardException.php',
         'JeroenDesloovere\\VCard\\VCardParser' => __DIR__ . '/..' . '/jeroendesloovere/vcard/src/VCardParser.php',

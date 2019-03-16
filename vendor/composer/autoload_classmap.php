@@ -1568,6 +1568,8 @@ return array(
     'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => $vendorDir . '/jakub-onderka/php-console-color/src/ConsoleColor.php',
     'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => $vendorDir . '/jakub-onderka/php-console-color/src/InvalidStyleException.php',
     'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => $vendorDir . '/jakub-onderka/php-console-highlighter/src/Highlighter.php',
+    'JeroenDesloovere\\Bundle\\VCardBundle\\DependencyInjection\\JeroenDesloovereVCardExtension' => $vendorDir . '/jeroendesloovere/vcard-bundle/DependencyInjection/JeroenDesloovereVCardExtension.php',
+    'JeroenDesloovere\\Bundle\\VCardBundle\\JeroenDesloovereVCardBundle' => $vendorDir . '/jeroendesloovere/vcard-bundle/JeroenDesloovereVCardBundle.php',
     'JeroenDesloovere\\VCard\\VCard' => $vendorDir . '/jeroendesloovere/vcard/src/VCard.php',
     'JeroenDesloovere\\VCard\\VCardException' => $vendorDir . '/jeroendesloovere/vcard/src/VCardException.php',
     'JeroenDesloovere\\VCard\\VCardParser' => $vendorDir . '/jeroendesloovere/vcard/src/VCardParser.php',
