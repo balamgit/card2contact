@@ -8,6 +8,7 @@
         <div class="card">
             <div class="card-header">
                 <h3 class="box-title" style="display: inline;">Contacts</h3>
+                <button class="btn btn-success" id="expo">Export as vcard</button>
             </div>
             <!-- /.box-header -->
             <div class="card-body">
@@ -42,8 +43,7 @@
     @endsection
 
 @section('scripts')
-    <script src='https://cdn.jsdelivr.net/gh/naptha/tesseract.js@v1.0.14/dist/tesseract.min.js'></script>
-
+<script src="js/vcard.js"></script>
     <script>
         $(document).ready(function() {
             var table= $('#IdDataTable').DataTable({
@@ -51,6 +51,45 @@
                 "scrollX": true,
                 select: true,
             });
+
+      function makeVcard() {
+          var name='';
+          var phone='';
+          var mail='';
+          var address='';
+          $.map(table.rows('.selected').data(), function (item) {
+              name=item[1];
+              phone=item[2];
+              mail=item[4];
+              address=item[5]+';;street;city;state;zip code;country';
+          });
+
+          // Without helper methods
+          var johnDoe = vCard.create(vCard.Version.FOUR)
+          johnDoe.add(vCard.Entry.NAME, ''+name+';'+';;')
+          johnDoe.add(vCard.Entry.FORMATTEDNAME, name)
+          johnDoe.add(vCard.Entry.PHONE, phone, vCard.Type.CELL)
+          johnDoe.add(vCard.Entry.EMAIL, mail, vCard.Type.WORK)
+          johnDoe.add(vCard.Entry.EMAIL, mail, vCard.Type.HOME)
+          johnDoe.add(vCard.Entry.ADDRESS, address, vCard.Type.HOME)
+          var link = vCard.export(johnDoe, name, true) // use parameter true to force download
+          document.body.appendChild(link)
+      }
+
+      $('#expo').click(function () {
+          var ids=[];
+          $.map(table.rows('.selected').data(), function (item) {
+              ids.push(item[0]);
+          });
+          if (ids.length>0 && ids.length===1){
+              makeVcard();
+          }
+          else {
+              alert('select any one');
+          }
+      });
+
+
         } );
     </script>
     @endsection

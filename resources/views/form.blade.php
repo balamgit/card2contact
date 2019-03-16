@@ -5,7 +5,18 @@
     @include('modals.notify')
     <!--row for porduct table-->
     <div class="container-fluid">
-        <div id="mypro" class="col-md-5"></div>
+
+        @if(session()->has('mymsg'))
+            <div class="col-md-7  col-sm-offset-2  ">
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <h4><i class="icon fa fa-info"></i>{{ session()->get('mymsg')}}</h4>
+                </div>
+            </div>
+        @endif
+        <div id="mypro" class="col-md-5">
+        </div>
+
         <br/>
         <div class="card">
             <div class="card-header">
@@ -21,7 +32,7 @@
                             {{csrf_field()}}
                             <div class="form-group">
                                 <label>Name*</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" class="form-control" name="name" required>
                             </div>
                             <div class="form-group">
                                 <label>Phone 1*</label>
@@ -33,7 +44,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Mail id*</label>
-                                <input type="text" class="form-control" name="mail1" id="mail1">
+                                <input type="email" class="form-control" name="mail1" id="mail1">
                             </div>
                             <div class="form-group">
                                 <label>Address*</label>
@@ -98,9 +109,11 @@
                         var y = 1;
                         $.each(emails, function (index, email) {
                             $('#mail' + x).val(email);
+                            x++;
                         });
                         $.each(phones, function (index, phone) {
                             $('#phone' + y).val(phone);
+                            y++;
                         });
                         $('#alltext').val(data.text);
                     });
