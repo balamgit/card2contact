@@ -8,7 +8,7 @@
         </li>
 
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link"><strong>CARDS TO CONTACTS USING OCR & NEURAL NETWORKS</strong></a>
         </li>
 
     </ul>
@@ -97,7 +97,7 @@
        -->
 
         <a class="nav-link" title="logout" href="/logout">
-            <i class="fa fa-sign-out fa-lg"></i>
+          <strong>{{session('user')}} </strong><i class="fa fa-sign-out fa-lg"></i>
         </a>
 
     </ul>

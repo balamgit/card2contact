@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{ config('app.name') }}</title>
+        <title>Card2Contact</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -36,6 +36,7 @@
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
+                        @yield('content')
                     </div>
                     <!-- /.row -->
                 </div><!-- /.container-fluid -->
@@ -52,6 +53,6 @@
     <!-- REQUIRED SCRIPTS -->
     <script src="{{asset('js/app.js')}}"></script>
     @yield('scripts')
-    </body
+    </body>
 
 </html>

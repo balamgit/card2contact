@@ -20,4 +20,6 @@ Route::group(['middleware'=>['pullback']],function (){
 
 Route::group(['middleware'=>['logcheck']],function () {
     Route::get('/dashboard', 'basicviewcontroller@dashboard')->name('Dashboard');
+    Route::get('/upload', 'basicviewcontroller@upload')->name('Upload_source_data');
+
 });

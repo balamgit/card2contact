@@ -5,32 +5,34 @@
     @include('modals.notify')
     <!--row for porduct table-->
     <div class="container-fluid">
-        <br/>
-        <div class="box">
-            <div class="box-header">
-                <h3 class="box-title">Table</h3>
-                <a href="#" title="add new products" data-toggle="modal" data-target="#IdAddProductModal" style="padding-left: 20px;"><i class="fa fa-plus fa-lg"></i></a>
-                <a href="#" title="Edit products" id="IdThrowEdit" style="padding-left: 20px;"><i class="fa fa-pencil-square-o fa-lg"></i></a>
-                <a href="#" title="Delete selected products" id="IdThrowDelete" class="pull-right" style="padding-right: 30px;"><i class="fa fa-trash-o fa-lg"></i></a>
-
-
+        <div class="card">
+            <div class="card-header">
+                <h3 class="box-title" style="display: inline;">Contacts</h3>
             </div>
             <!-- /.box-header -->
-            <div class="box-body">
+            <div class="card-body">
                 <table id="IdDataTable" class="table table-bordered table-striped text-center" style="width:100%">
                     <thead>
                     <tr>
                         <th>S.no</th>
                         <th>Name</th>
-                        <th>Price in Rs</th>
-                        <th>UOM</th>
-                        <th>Image</th>
-                        <th>updated_at</th>
-                        <th>created_at</th>
+                        <th>Phone1</th>
+                        <th>Phone2</th>
+                        <th>mail1</th>
+                        <th>Address</th>
                     </tr>
                     </thead>
                     <tbody>
-
+                    @foreach($data as $dat)
+                        <tr>
+                            <td>{{$dat->id}}</td>
+                            <td>{{$dat->name}}</td>
+                            <td>{{$dat->phone1}}</td>
+                            <td>{{$dat->phone2}}</td>
+                            <td>{{$dat->mail1}}</td>
+                            <td>{{$dat->address}}</td>
+                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
@@ -40,17 +42,15 @@
     @endsection
 
 @section('scripts')
-         <script>
-             $(document).ready(function() {
-                 var table= $('#IdDataTable').DataTable({
-                     stateSave: true,
-                     "scrollX": true,
-                     select: true,
-                 });
-                 //table initialztn end
+    <script src='https://cdn.jsdelivr.net/gh/naptha/tesseract.js@v1.0.14/dist/tesseract.min.js'></script>
 
-
-
-             } );
-         </script>
+    <script>
+        $(document).ready(function() {
+            var table= $('#IdDataTable').DataTable({
+                stateSave: true,
+                "scrollX": true,
+                select: true,
+            });
+        } );
+    </script>
     @endsection
