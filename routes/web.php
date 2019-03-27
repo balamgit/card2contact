@@ -18,11 +18,10 @@ Route::group(['middleware'=>['pullback']],function (){
     Route::get('/login', 'logincontroller@loginview');
 });
 
-Route::group(['middleware'=>['logcheck']],function () {
+Route::group(['middleware'=>['logcheck','temp']],function () {
 
     Route::get('/dashboard', 'basicviewcontroller@dashboard')->name('Dashboard');
     Route::get('/upload', 'basicviewcontroller@upload')->name('Upload_source_data');
     Route::post('/upload', 'basicviewcontroller@store');
-
 
 });
